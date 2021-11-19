@@ -213,6 +213,7 @@ body{
 .main-left-wt{
     background-color: white;
     margin-top: -2.8125rem;
+    display: flex;
     flex-direction: column;
     width: 25rem;
     display: flex;
@@ -300,6 +301,7 @@ body{
 .img-slide{
     width: 100%;
     height: 50%;
+    border-radius: 0.3125rem;
 }
 .slide-title{
     margin-top: 0.9375rem;
@@ -311,7 +313,7 @@ body{
     margin-top: 0.625rem;
     margin-left: 0.9375rem;
     font-size: 0.875rem;
-    color: #1b4d70;
+    color: #6289a5;
 }
 .slide-preco{
     margin-top: 0.625rem;
@@ -413,24 +415,21 @@ body{
 .room-desc{
     width: 50rem;
     height: 18.75rem;
-   /*background-color: brown;
-   */
+   /*background-color: brown;*/
     display: flex;
     flex-direction: row;
 }
 .room-desc-left{
     width: 25rem;
     height: 17.5rem;
-   /*background-color: cornflowerblue;
-   */
+   /*background-color: cornflowerblue;*/
     margin-top: 0.625rem;
     margin-left: 0.625rem;
 }
 .room-desc-right{
     width: 25rem;
     height: 17.5rem;
-   /*background-color:darkcyan;
-   */
+   /*background-color:darkcyan;*/
     margin-top: 0.625rem;
     margin-left: 0.625rem;
     display: flex;
@@ -511,8 +510,7 @@ body{
     font-weight: 600;
 }
 .background-contact{
-   /*background-color: tomato;
-   */
+   /*background-color: tomato;*/
     width: 50rem;
     height: 28.125rem;
     display: flex;
@@ -521,8 +519,7 @@ body{
 .info-contact{
     margin-top: 1.875rem;
     margin-left: 1.875rem;
-   /*background-color: red;
-   */
+   /*background-color: red;*/
 }
 .contact-title{
     font-family:'Segoe UI', sans-serif;
@@ -642,4 +639,227 @@ body{
     width: 13.4375rem;
     border-radius: 0.625rem;
     margin-top: 3.125rem;
+}
+
+
+/*==== QUARTOS ====*/
+.main-quartos{
+    height: 400px;
+}
+.header-quartos{
+    width: 100%;
+    height:450px;
+    background-image:url("img/teste.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.posi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.title-quartos{
+    margin-top: 15px;
+    margin-left: 6.875rem;
+    color: #ffffff;
+    user-select: none;
+    white-space: nowrap;
+    font-size: 1.5625rem;
+}
+.nav-quartos{
+    margin-top: 15px;
+    font-size: 0.875rem;
+    margin-right: 6.875rem;
+    white-space: nowrap;
+}
+.logo-header{
+    margin-top: 15px;
+    width: 200px;
+    height: 120px;
+}
+.title-header{
+    color: white;
+    font-family: 'PT Sans';
+    font-size: 65px;
+}
+.posi2{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    margin-left: -70px;
+}
+.quartos-wt{
+    background-color: white;
+    height: 1400px;
+    margin-top: -0.9375rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 6.25rem;
+}
+
+/* CALENDARIO */
+.base-calendar{
+    margin-top: -30px;
+    width: 700px;
+    height: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 0.625rem 0.625rem rgba(0,0,0,0.10), 0 0.3125rem 0.3125rem rgba(0,0,0,0.10);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.calendar-1,.calendar-2{
+    width: 230px;
+}
+:root {
+    --teal-050: #effcf6;
+    --teal-100: #c6f7e2;
+    --teal-200: #8eedc7;
+    --teal-300: #65d6ad;
+    --teal-400: #3ebd93;
+    --teal-500: #27ab83;
+    --teal-600: #199473;
+    --teal-700: #147d64;
+    --teal-800: #0c6b58;
+    --teal-900: #014d40;
+    --blue-grey-050: #f0f4f8;
+    --blue-grey-100: #d9e2ec;
+    --blue-grey-200: #bcccdc;
+    --blue-grey-300: #9fb3c8;
+    --blue-grey-400: #829ab1;
+    --blue-grey-500: #627d98;
+    --blue-grey-600: #486581;
+    --blue-grey-700: #334e68;
+    --blue-grey-800: #243b53;
+    --blue-grey-900: #102a43;
+}
+.month-indicator {
+    color: var(--blue-grey-700);
+    text-align: center;
+    font-weight: 500;
+}
+.day-of-week, .date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+.day-of-week {
+    margin-top: 1.25em;
+}
+.day-of-week {
+    font-size: 0.7em;
+    color: var(--blue-grey-400);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+/* Dates */
+.date-grid {
+    margin-top: 0.5em;
+}
+/* Positioning the first day */
+.jan button:first-child {
+    grid-column: 7;
+}
+.feb button:first-child {
+    grid-column: 2;
+}
+.date-grid button {
+    position: relative;
+    border: 0;
+    width: 4.5ch;
+    height: 4.5ch;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--blue-grey-600);
+}
+.date-grid button:hover, .date-grid button:focus {
+    outline: none;
+    background-color: var(--blue-grey-050);
+    color: var(--blue-grey-700);
+}
+.date-grid button:active, .date-grid button.is-selected {
+    background-color: var(--teal-100);
+    color: var(--teal-900);
+}
+.main-search-rooms{
+    height: 670px;
+    width: 800px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.search-rooms-txt{
+    font-family: 'PT Sans';
+    color: black;
+    font-size: 22px;
+}
+.room-card{
+    background-color: white;
+    float: left;
+    width: 25%;
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 225px;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 0.625rem 0.625rem rgba(0,0,0,0.10), 0 0.3125rem 0.3125rem rgba(0,0,0,0.10);
+}
+.room-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #013F6B;
+    font-weight: 800;
+}
+.container-rooms{
+    margin-bottom: 50px;
+    height: 690px;
+}
+.calendar-search{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.range{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #01BAB3;
+    cursor: pointer;
+}
+.range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #01BAB3;
+    cursor: pointer;
+}
+.input-value{
+    border: none;
+    font-family: 'Poppins';
+    font-weight: 600;
+    width: 25px;
 }
