@@ -3,9 +3,16 @@
     padding: 0;
 }
 body{
-   /*background-color: #274FC7;
-    */
     background-color: #3351af;
+}
+button{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+a:visited {
+    color: transparent;
 }
 .header{
     width: 100%;
@@ -99,6 +106,12 @@ body{
     justify-content: center;
     align-items: center;
 }
+.centered-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .search{
     background-color: white;
     width: 37.5rem;
@@ -107,7 +120,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-left: 0.9375rem;
-    margin-top: -30px;
+    margin-top: -1.875rem;
     margin-bottom: 1.875rem;
 }
 .search-content{
@@ -195,6 +208,8 @@ body{
 .main-wt{
     background-color: white;
     height: 31.25rem;
+    display: flex;
+    justify-content: center;
     padding-top: 9.375rem;
     padding-bottom: 6.25rem;
     display: flex;
@@ -239,8 +254,6 @@ body{
     user-select: none;
 }
 .icons{
-   /*background-color: red;
-    */
     margin-top: 3.125rem;
     margin-bottom: 1.875rem;
     width: 100%;
@@ -252,8 +265,6 @@ body{
     user-select: none;
 }
 .icons-left{
-   /*background-color:lawngreen;
-    */
     width: 9.375rem;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -261,16 +272,14 @@ body{
     user-select: none;
 }
 .icons-right{
-   /*background-color:lightcoral;
-    */
-    width: 150px;
+    width: 9.375rem;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 .main-bl{
-    height: 700px;
+    height: 43.75rem;
     padding-top: 1.25rem;
     padding-bottom: 6.25rem;
     display: flex;
@@ -290,6 +299,7 @@ body{
     width: 15.625rem;
     height: 19.6875rem;
     border-radius: 0.625rem;
+    box-shadow: 0 0.625rem 0.625rem rgba(0,0,0,0.10), 0 0.3125rem 0.3125rem rgba(0,0,0,0.10);
 }
 .slide-b{
     background-color: white;
@@ -297,6 +307,7 @@ body{
     width: 15.625rem;
     height: 19.6875rem;
     border-radius: 0.3125rem;
+    box-shadow: 0 0.625rem 0.625rem rgba(0,0,0,0.10), 0 0.3125rem 0.3125rem rgba(0,0,0,0.10);
 }
 .img-slide{
     width: 100%;
@@ -308,6 +319,13 @@ body{
     margin-left: 0.9375rem;
     font-family: 'Abril Fatface', sans-serif;
     font-size: 0.875rem;
+}
+.slide-title-desc{
+    margin-top: 0.9375rem;
+    margin-left: 0.9375rem;
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 0.875rem;
+    color:rgb(228, 228, 228);
 }
 .slide-text{
     margin-top: 0.625rem;
@@ -331,9 +349,22 @@ body{
     font-size: 0.75rem;
     margin-top: 0.3125rem;
 }
+.slide-diario-desc{
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: rgb(190, 190, 190);
+    font-size: 0.75rem;
+    margin-top: 0.3125rem;
+}
 .main-wt-opinion{
     background-color: white;
     height: 43.75rem;
+    padding-top: 1.125rem;
+    padding-bottom: 6.25rem;
+}
+.main-wt-reserva{
+    background-color: white;
+    height: 62.5rem;
     padding-top: 1.125rem;
     padding-bottom: 6.25rem;
 }
@@ -415,25 +446,37 @@ body{
 .room-desc{
     width: 50rem;
     height: 18.75rem;
-   /*background-color: brown;*/
     display: flex;
     flex-direction: row;
 }
 .room-desc-left{
     width: 25rem;
     height: 17.5rem;
-   /*background-color: cornflowerblue;*/
     margin-top: 0.625rem;
     margin-left: 0.625rem;
 }
 .room-desc-right{
     width: 25rem;
     height: 17.5rem;
-   /*background-color:darkcyan;*/
     margin-top: 0.625rem;
     margin-left: 0.625rem;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.room-description-right{
+    width: 56.25rem;
+    height: 17.5rem;
+    margin-top: 0.625rem;
+    margin-left: 0.625rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -445,20 +488,42 @@ body{
     font-size: 1.5rem;
     color: white;
 }
+.room-name-description{
+    font-family: 'Abril Fatface';
+    font-size: 1.5rem;
+    color: #013F6B;
+    font-weight: bold;
+}
 .room-txt{
     font-family: 'Poppins';
     font-size: 0.625rem;
     color: white;
     text-align: justify;
 }
+.room-txt-desc{
+    color: #013F6B;
+    font-family: 'Poppins';
+    font-size: 0.625rem;
+    text-align: justify;
+    font-weight: bold;
+}
 .icon-txt-size{
     font-family: 'Poppins';
     font-size: 0.5rem;
     color: white;
 }
+.icon-txt-size-desc{
+    font-family: 'Poppins';
+    font-size: 0.5rem;
+    font-weight: bold;
+}
 .icon-room{
     font-size: 0.75rem;
     color: white;
+}
+.icon-room-desc{
+    font-size: 0.75rem;
+    color: #013F6B;
 }
 .room-price-card{
     width: 15rem;
@@ -473,6 +538,12 @@ body{
     color: #01BAB3;
     font-family: 'Abril Fatface';
     font-size: 2.5rem;
+}
+.card-price-desc{
+    margin-left: 0.625rem;
+    color: white;
+    font-family: 'Abril Fatface';
+    font-size: 2.3125rem;
 }
 .btn-card{
     background-color: #01BAB3;
@@ -496,8 +567,28 @@ body{
     color: #01BAB3;
     font-weight: 500;
 }
+.btn-card-save-desc{
+    background-color: transparent;
+    border-color: #7DB1D6;
+    padding: 0.3125rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    width: 6.25rem;
+    height: 1.6875rem;
+    color: #7DB1D6;
+    font-weight: 500;
+}
 .star{
     color: #01BAB3;
+}
+.star-desc{
+    color: #7DB1D6;
+}
+.card-desc{
+    font-size: 0.875rem;
+}
+.cards{
+    width: 13.75rem;
 }
 .star-c{
     color: #01BAB3;
@@ -508,9 +599,14 @@ body{
     font-size: 0.625rem;
     color: rgb(66, 66, 66);
     font-weight: 600;
+    margin-left: 1.5625rem;
+}
+.card-price-txt{
+    font-family: 'Poppins';
+    font-size: 0.625rem;
+    color: white;
 }
 .background-contact{
-   /*background-color: tomato;*/
     width: 50rem;
     height: 28.125rem;
     display: flex;
@@ -519,7 +615,6 @@ body{
 .info-contact{
     margin-top: 1.875rem;
     margin-left: 1.875rem;
-   /*background-color: red;*/
 }
 .contact-title{
     font-family:'Segoe UI', sans-serif;
@@ -644,26 +739,58 @@ body{
 
 /*==== QUARTOS ====*/
 .main-quartos{
-    height: 400px;
+    height: 25rem;
 }
 .header-quartos{
     width: 100%;
-    height:450px;
-    background-image:url("img/teste.jpg");
+    height: 28.125rem;
+    top: 0rem;
+    left: 0rem;
+    background-image:url("img/fundo.jpg");
     background-repeat: no-repeat;
     background-position-x: center;
+    background-size: contain;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.header-quartos-reserva{
+    width: 100%;
+    height: 28.125rem;
+    top: 0rem;
+    left: 0rem;
+    background-image:url("img/reservas.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.header-quartos-description{
+    width: 100%;
+    height:28.125rem;
+    top: 0rem;
+    left: 0rem;
+    background-image:url("img/artemida.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 .posi{
+   /* Posicionamento */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .title-quartos{
-    margin-top: 15px;
+    margin-top: 0.9375rem;
     margin-left: 6.875rem;
     color: #ffffff;
     user-select: none;
@@ -671,41 +798,65 @@ body{
     font-size: 1.5625rem;
 }
 .nav-quartos{
-    margin-top: 15px;
+    margin-top: 0.9375rem;
     font-size: 0.875rem;
     margin-right: 6.875rem;
     white-space: nowrap;
 }
 .logo-header{
-    margin-top: 15px;
-    width: 200px;
-    height: 120px;
+    margin-top: 0.9375rem;
+    width: 12.5rem;
+    height: 7.5rem;
 }
 .title-header{
     color: white;
     font-family: 'PT Sans';
-    font-size: 65px;
+    font-size: 4.0625rem;
 }
 .posi2{
     display: flex;
     align-items: center;
     justify-content:center;
     flex-direction: column;
-    margin-left: -70px;
+    margin-left: -4.375rem;
 }
 .quartos-wt{
     background-color: white;
-    height: 1400px;
+    height: 87.5rem;
     margin-top: -0.9375rem;
     padding-top: 0.3125rem;
     padding-bottom: 6.25rem;
 }
-
+.quartos-wt-description{
+    background-color: white;
+    margin-top: -0.625rem;
+    height: 81.25rem;
+    width: 100%;
+    padding-bottom: 6.25rem;
+}
+.container-description{
+    width: 56.25rem;
+    height: 37.5rem;
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+    display: flex;
+    flex-direction: row;
+}
+.room-price-card-description{
+    margin-top: -7.8125rem;
+    width: 15rem;
+    height: 10rem;
+    background-color: #3b59b3;
+    border-radius: 0.625rem;
+    padding-top: 1.5625rem;
+    padding-left: 2.1875rem;
+    box-shadow: 0 0.625rem 0.625rem rgba(0,0,0,0.10), 0 0.3125rem 0.3125rem rgba(0,0,0,0.10);
+}
 /* CALENDARIO */
 .base-calendar{
-    margin-top: -30px;
-    width: 700px;
-    height: 260px;
+    margin-top: -1.875rem;
+    width: 43.75rem;
+    height: 16.25rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -716,7 +867,7 @@ body{
     user-select: none;
 }
 .calendar-1,.calendar-2{
-    width: 230px;
+    width: 14.375rem;
 }
 :root {
     --teal-050: #effcf6;
@@ -760,7 +911,6 @@ body{
     font-variant: small-caps;
     text-align: center;
 }
-
 /* Dates */
 .date-grid {
     margin-top: 0.5em;
@@ -791,15 +941,15 @@ body{
     color: var(--teal-900);
 }
 .main-search-rooms{
-    height: 670px;
-    width: 800px;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    height: 41.875rem;
+    width: 50rem;
+    padding-top: 3.125rem;
+    padding-bottom: 6.25rem;
 }
 .search-rooms-txt{
     font-family: 'PT Sans';
     color: black;
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 .room-card{
     background-color: white;
@@ -807,34 +957,34 @@ body{
     width: 25%;
     margin-left: 2%;
     margin-top: 2%;
-    width: 225px;
-    height: 315px;
-    border-radius: 10px;
+    width: 14.0625rem;
+    height: 19.6875rem;
+    border-radius: 0.625rem;
     box-shadow: 0 0.625rem 0.625rem rgba(0,0,0,0.10), 0 0.3125rem 0.3125rem rgba(0,0,0,0.10);
 }
 .room-title{
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    margin-top: 15px;
-    margin-left: 15px;
+    font-size: 1rem;
+    margin-top: 0.9375rem;
+    margin-left: 0.9375rem;
     color: #013F6B;
     font-weight: 800;
 }
 .container-rooms{
-    margin-bottom: 50px;
-    height: 690px;
+    margin-bottom: 3.125rem;
+    height: 43.125rem;
 }
 .calendar-search{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 .range{
     -webkit-appearance: none;
     width: 100%;
-    height: 5px;
-    border-radius: 5px;
+    height: 0.3125rem;
+    border-radius: 0.3125rem;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -844,15 +994,15 @@ body{
 .range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
     border-radius: 50%;
     background: #01BAB3;
     cursor: pointer;
 }
 .range::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
+    width: 1.5625rem;
+    height: 1.5625rem;
     border-radius: 50%;
     background: #01BAB3;
     cursor: pointer;
@@ -861,5 +1011,94 @@ body{
     border: none;
     font-family: 'Poppins';
     font-weight: 600;
-    width: 25px;
+    width: 1.5625rem;
+}
+.container-item-desc{
+    width: 25rem;
+    height: 8.125rem;
+}
+.item-desc{
+    width: 7.1875rem;
+    height: 1.875rem;
+    margin-left: 0.9375rem;
+    margin-top: 0.625rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    float: left;
+}
+.location-description{
+    width: 29.375rem;
+    border-radius: 0.625rem;
+}
+.background-contact1{
+    width: 65rem;
+    height: 50rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2.8125rem;
+}
+.text-desc1{
+    width: 20.3125rem;
+    color: #013F6B;
+}
+.text-desc2{
+    width: 20.3125rem;
+    margin-top: 3.125rem;
+    color: #013F6B;
+}
+.info-contact1{
+    margin-left: 4.875rem;
+}
+.footer-btn1{
+    width: 5.625rem;
+    height: 2.5rem;
+    background-color: #01BAB3;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    border-style: none;
+    color: white;
+    font-size: 0.875rem;
+}
+.bg-reservas{
+    width: 62.5rem;
+    height: 31.25rem;
+    display: inline-flex;
+    color: #013F6B;
+}
+.left-reservas{
+    width: 31.25rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.right-reservas{
+    width: 31.25rem;
+    margin-left: 0.9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.base-calendar-reserva{
+    margin-top: -1.875rem;
+    width: 31.25rem;
+    height: 16.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0 0.3125rem 0.3125rem rgba(0,0,0,0.10), 0 0.1563rem 0.1563rem rgba(0,0,0,0.10);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.reserva-enviar{
+    margin-left: 7.8125rem;
 }
